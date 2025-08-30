@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include "dht11_Arduino.h"
+#include "debug_print.h"
 
 // Define your data pin here
 #define DHT_PIN 2
@@ -14,7 +15,8 @@ void setup()
   {
     // do nothing, just waiting until serial has finished initializing
   }
-  Serial.println("Starting program...");
+  debugPrint("Starting program...");
+  delay(50);
 }
 
 void loop() 
