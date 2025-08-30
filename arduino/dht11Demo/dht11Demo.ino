@@ -8,6 +8,7 @@
 
 // Define global variables
 uint8_t bytes[5];
+uint8_t ranOnce = 0;
 
 void setup() 
 {
@@ -36,6 +37,9 @@ void loop()
 
     double hum, temp;
     outcome = processDHT_Reading(bytes, &hum, &temp);
+  if(ranOnce == 0)
+  {
+    ranOnce = 1;
 
     if(outcome == DHTLIB_OK)
     {
@@ -55,6 +59,7 @@ void loop()
     Serial.println("Timeout error...");
   }
 
+  }
 
   LowPower.powerDown(SLEEP_FOREVER, ADC_OFF, BOD_ON);
   return;
