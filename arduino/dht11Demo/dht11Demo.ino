@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include "dht11_Arduino.h"
+#include "LowPower.h"
 #include "debug_print.h"
 
 // Define your data pin here
@@ -55,7 +56,8 @@ void loop()
   }
 
 
-  delay(5000);
+  LowPower.powerDown(SLEEP_FOREVER, ADC_OFF, BOD_ON);
+  return;
 }
 
 /* EOF */
