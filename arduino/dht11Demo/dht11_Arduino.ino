@@ -66,9 +66,9 @@ int readSensor(uint8_t dht11Pin, uint8_t* bytes)
 		{
 			if((micros() - t_0) > timeoutThreshold)
 			{
-				Serial.print("Timed out on bit ");
-                Serial.print(i);
-                Serial.println(", LOW portion...");
+				// Serial.print("Timed out on bit ");
+                // Serial.print(i);
+                // Serial.println(", LOW portion...");
 				return DHTLIB_ERROR_TIMEOUT; // timeout
 			}
 		}
@@ -83,9 +83,9 @@ int readSensor(uint8_t dht11Pin, uint8_t* bytes)
 		{
 			if((micros() - t_0) > timeoutThreshold)
 			{
-				Serial.print("Timed out on bit ");
-                Serial.print(i);
-                Serial.println(", HIGH portion...");
+				// Serial.print("Timed out on bit ");
+                // Serial.print(i);
+                // Serial.println(", HIGH portion...");
 				return DHTLIB_ERROR_TIMEOUT; //time out
 			}
 		}
