@@ -1,3 +1,7 @@
+/*
+    This program is meant to read data, via serial port, being sent from a connected Arduino via USB
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
